@@ -1,0 +1,3 @@
+hi 
+this file is just for help
+so you must for ster 1 make a simple calculator
