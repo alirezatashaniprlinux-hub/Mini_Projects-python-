@@ -1,3 +1,12 @@
+def get_order(string , endnum):
+   
+    while True:
+        try:
+            num = int(input(string))
+            if endnum < num:
+                raise Exception()
+        except:
+            print('this order not a number or out of range')
 def main():
     print('hi\nwelcome to calculator')
     while True:
@@ -7,7 +16,7 @@ def main():
         print('4. dev')
         print('5. exit')
         
-        choose = int(input('enter order: '))
+        choose = get_order('enter order :')
         num1 = float(input('enter num : '))
         num2 = float(input('enter num : '))
         match choose:
