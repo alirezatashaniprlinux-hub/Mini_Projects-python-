@@ -17,10 +17,17 @@ def get_num(string):
         except:
             print('please enter a number ...')
             
+
 def sqr(num):
     if num >= 0:
         return num**(0.5)
     
+
+def fact(num):
+    if num ==1 :
+        return 1
+    return num*fact(num-1)
+
 def main():
     print('hi\nwelcome to calculator')
     while True:
@@ -28,6 +35,7 @@ def main():
         print('2. min')
         print('3. mul')
         print('4. dev')
+        print('5. fact')
         print('6. power')
         print('7. sqr')
         print('8. exit')
@@ -38,10 +46,16 @@ def main():
         
         if choose == 8 :
             break
+        
         num1 = get_num('enter num 1: ')
+        
         if choose ==7 :
             print(f'√{num1} = {sqr(num1)}')
             continue
+        if choose == 5 :
+            print(f'{num1}! = {fact(num1)}')
+            continue
+        
         num2 = get_num('enter num 2: ')
         match choose:
             case 1:
