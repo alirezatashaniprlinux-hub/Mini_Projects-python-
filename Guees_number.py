@@ -64,14 +64,25 @@ def game(username):
             else:
                 update(username , newscore)
             break
+        
+def bestplayer():
+    global users
+    max = 0
+    player = ''
+    for i in users:
+        if int(i[1])>max:
+            max = int(i[1])
+            player = i[0]
+    print(f'{player} with {max} is best player')
 
 def main():
     global users
     users = read_users()
     username = input('enter your name (username for game) : ')
     sign_up(username)
-    
+    bestplayer()
     game(username)
+    
 
 
 if __name__ == "__main__":
